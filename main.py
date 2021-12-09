@@ -8,7 +8,9 @@ import os
 
 def get_token():
     #Get the API Key from Heroku Config Vars
+    print('Trying to get the Token')
     token = str(os.environ.get(DISCORD_API))
+    print(token)
     return token
 
 def get_server():  # If this was a real bot I would have to figure out how to get the server of where it was installed
