@@ -4,12 +4,11 @@
 import discord
 import random
 import numpy as np
+import os
 
 def get_token():
-    #Get the API Key from the Notepad
-    f = open('discord_token.txt', "r")
-    token = f.read()
-    f.close()
+    #Get the API Key from Heroku Config Vars
+    token = str(os.environ.get(DISCORD_API))
     return token
 
 def get_server():  # If this was a real bot I would have to figure out how to get the server of where it was installed
